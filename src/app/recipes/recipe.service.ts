@@ -10,9 +10,9 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe(
-      'Raven Tengu',
+      'Shadow of the Colossus',
       'This is a test',
-      'http://okikiko.com/wp-content/uploads/2017/06/Japanese-mythical-creature.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjpcwEFtI_DMbjSIH1RCbbeevffKIK6ry8C53jKIvqScoFO0uF',
       [
         new Ingredient('Tomatoes', 2),
         new Ingredient('Cheese', 1)
@@ -52,6 +52,9 @@ export class RecipeService {
   getRecipes() {
     // copy of
     return this.recipes.slice();
+  }
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[])  {
